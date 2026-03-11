@@ -1,0 +1,25 @@
+# Build artifacts
+/build/
+/mocky
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go workspace caches
+/.gocache/
+/coverage.out
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Local runtime leftovers
+*.log
+*.pid

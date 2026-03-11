@@ -1,0 +1,30 @@
+server:
+  address: ":8080"
+
+routes:
+  - path: /health
+    method: GET
+    response:
+      status: 200
+      headers:
+        Content-Type: application/json
+      body:
+        status: ok
+
+  - path: /echo
+    method: POST
+    builtin:
+      name: echo
+
+  - path: /jobs
+    method: POST
+    async: true
+    async_response:
+      status: 202
+      headers:
+        Content-Type: application/json
+      body:
+        status: accepted
+        queued: true
+    builtin:
+      name: echo
